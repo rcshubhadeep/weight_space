@@ -1,0 +1,15 @@
+[project]
+name = "weight-space"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab>=4.1.6",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "safetensors>=0.8.0",
+    "torch>=2.15.0",
+    "transformers>=5.23.0",
+]
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cpu"
