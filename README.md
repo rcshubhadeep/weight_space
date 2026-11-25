@@ -1,23 +1,58 @@
 # Weight-space workbench
 
-An early CPU-friendly Python workbench for exploring the ideas in [RESEARCH.md](RESEARCH.md). The first example deliberately breaks one weight of a tiny paddle policy, tests a manual repair, and records what happened.
+[Research report: Two tasks, one gradient-free weight edit](docs/GRADIENT_FREE_COMPOSITION.md)
 
-```bash
-uv sync
-uv run python -m examples.paddle_repair
-uv run python -m unittest discover -s tests
+Experiments in specifying a behavior change, computing a small edit to a neural network, and testing what survives the edit. The current language-model experiments use LFM3-1.7B and a supervised, gradient-free rank-one solve. Applying the branch requires no external model or labeling service.
+
+## Results at a glance
+
+| Experiment | Result | Scope |
+|---|---|---|
+| BoolQ, counterbalanced A/B | 57.0% → **71.6%**, versus 64.1% for the best of 32 equal-norm random patches | All 3,270 development questions, each scored in both mappings |
+| BoolQ, direct Yes/No probe | 80.7% → **80.9%**, one extra correct answer | Same A/B-fitted patch, 512 development questions |
+| Field disambiguation | 79.8% → **82.9%** on unseen document types | 299 documents from a public extraction dataset, adapted to two choices |
+| Synthetic urgency | 53.1% → **78.1%** on novel phrases, with sentiment at 98.4% | Direct write to one LFM3 matrix with exact restoration |
+| Deletion-mask composition | **2 of 18** individually successful pairs failed when combined | Two disjoint-mask counterexamples in a 48-seed toy study |
+| LFM3 patch composition | **0 of 160** fitted anchor choices changed with both cross-protected patches active | On held-out prompts, 207 of 320 choices passed the real-arithmetic margin check. None of those flipped in FP16 |
+| Algebraic decision intervals | **280 of 320** held-out choices proved stable through the full strength interval | Both cross-protected patches active. Exact arithmetic over captured tensors |
+
+BoolQ's clearest gain is answer-mapping robustness. The direct Yes/No result provides little evidence of general reading-comprehension improvement. See the [results and caveats](docs/RESULTS.md) for each experiment, including random controls, preservation failures, and the earlier distillation work.
+
+## Reproduce
+
+- [Environment, pinned downloads, and commands](docs/REPLICATION.md)
+- [Mathematical derivation and executable checks](docs/METHOD.md)
+- [Comparison with weight-space-lp, ROME, and related work](docs/RELATED_WORK.md)
+- [Frozen reports and evidence manifest](results/README.md)
+
+With a PyTorch environment active, run the small tests and verify the frozen results:
+
+```sh
+python -m unittest discover -s tests -v
+python scripts/verify_evidence.py
 ```
 
-The example saves original and edited weights as safetensors and a detailed JSON report in `artifacts/paddle_repair/`. Rerunning it overwrites those files. The model is `torch.nn.Linear(2, 2)` with inputs `[paddle_position, ball_position]` and scores `[left, right]`; to reload a saved state, construct that architecture and use `safetensors.torch.load_file` with `model.load_state_dict(...)`.
+## Layout
 
-Read [examples/paddle_repair.py](examples/paddle_repair.py) to see the specification, edit, and comparison. A tie in the action scores selects the first action; this example intentionally excludes aligned positions because it has no stay action. Its four cases demonstrate the workflow, not generalization or a validated repair method. No optimizer or LP solver is used yet.
+| Path | Contents |
+|---|---|
+| [weight_space/](weight_space/) | Evaluation helpers and rank-one numerical routines |
+| [examples/](examples/) | Runnable experiments, from toy models to LFM3 benchmarks |
+| [notebooks/](notebooks/) | Exploratory notebooks |
+| [docs/](docs/) | Methods, replication, findings, and provenance |
+| [results/](results/) | Frozen JSON reports and input fingerprints |
+| `artifacts/` | Local datasets, patches, checkpoints, and new run outputs |
 
-## Trained network: spurious correlation
+[Research agenda](RESEARCH.md)
 
-```bash
-uv run python -m examples.spurious_feature
-```
+[Compile standalone classifiers from LFM token embeddings and try the word-order demo](docs/REPLICATION.md#standalone-embedding-children).
 
-This trains a small classifier on synthetic data where a misleading feature usually agrees with the label. It then uses labeled calibration examples where that feature conflicts with the label to find a hidden-activation direction. A rank-one output-weight edit and ten random-direction controls each select their edit strength using a separate validation set. The report evaluates them on a separate balanced test set, broken down by whether the misleading feature agrees or conflicts with the label. The original and edited weights and report are written to `artifacts/spurious_feature/`; rerunning overwrites them.
+[Order-sensitive children, LP readout, reversal demo and failure cases](docs/ORDER_INHERITANCE.md).
 
-Training uses gradients; the subsequent direction construction and edits do not. The data generator supplies the conflict labels, so this does not solve the harder problem of discovering the failure without that information. The controls tune their strengths independently, so their edit norms can differ. Results are for one seed and are not evidence of general effectiveness.
+[Recovering a rank-one program from reversals: theorem, proof, compiler, controls, and failures](docs/REVERSAL_RECOVERY.md).
+
+[Experimental record by research question, intervention, outcome, and limitation](docs/EXPERIMENTS.md).
+
+[SST-2: improving the full Liquid model and benchmarking standalone children](docs/SST2.md).
+
+[Composing the BoolQ and SST-2 edits into one always-active LFM patch](docs/BOOLQ_SST2_COMPOSITION.md).

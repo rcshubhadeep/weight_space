@@ -1,0 +1,46 @@
+{
+  "fit_adjectives__fit_frames": {
+    "messages": 36,
+    "parent_fixed_AB": {
+      "correct": 32,
+      "both_correct": 14
+    },
+    "child": {
+      "correct": 36,
+      "both_correct": 18
+    }
+  },
+  "fit_adjectives__held_out_frames": {
+    "messages": 36,
+    "parent_fixed_AB": {
+      "correct": 27,
+      "both_correct": 9
+    },
+    "child": {
+      "correct": 5,
+      "both_correct": 0
+    }
+  },
+  "held_out_adjectives__fit_frames": {
+    "messages": 64,
+    "parent_fixed_AB": {
+      "correct": 55,
+      "both_correct": 23
+    },
+    "child": {
+      "correct": 46,
+      "both_correct": 16
+    }
+  },
+  "held_out_adjectives__held_out_frames": {
+    "messages": 64,
+    "parent_fixed_AB": {
+      "correct": 53,
+      "both_correct": 21
+    },
+    "child": {
+      "correct": 23,
+      "both_correct": 0
+    }
+  }
+}

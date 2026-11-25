@@ -1,0 +1,134 @@
+{
+  "model_revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "input_sha256": {
+    "train-00000-of-00001.parquet": "c7921283b75a42e685f50edecb96798607ea0fcbfd0739ee8975f22c12d55f09",
+    "validation-00000-of-00001.parquet": "fb00fe008f6828f86ba2beda8415a4cf5da0c884f21c5f238c87131b5aa19529"
+  },
+  "fit": 65954,
+  "calibration": 1024,
+  "validation": 872,
+  "calibration_trials": [
+    {
+      "ridge": 0.01,
+      "mix": 0.0,
+      "correct": 882
+    },
+    {
+      "ridge": 0.01,
+      "mix": 0.25,
+      "correct": 918
+    },
+    {
+      "ridge": 0.01,
+      "mix": 0.5,
+      "correct": 937
+    },
+    {
+      "ridge": 0.01,
+      "mix": 0.75,
+      "correct": 940
+    },
+    {
+      "ridge": 0.01,
+      "mix": 1.0,
+      "correct": 931
+    },
+    {
+      "ridge": 0.1,
+      "mix": 0.0,
+      "correct": 885
+    },
+    {
+      "ridge": 0.1,
+      "mix": 0.25,
+      "correct": 920
+    },
+    {
+      "ridge": 0.1,
+      "mix": 0.5,
+      "correct": 938
+    },
+    {
+      "ridge": 0.1,
+      "mix": 0.75,
+      "correct": 941
+    },
+    {
+      "ridge": 0.1,
+      "mix": 1.0,
+      "correct": 931
+    },
+    {
+      "ridge": 1.0,
+      "mix": 0.0,
+      "correct": 886
+    },
+    {
+      "ridge": 1.0,
+      "mix": 0.25,
+      "correct": 925
+    },
+    {
+      "ridge": 1.0,
+      "mix": 0.5,
+      "correct": 938
+    },
+    {
+      "ridge": 1.0,
+      "mix": 0.75,
+      "correct": 942
+    },
+    {
+      "ridge": 1.0,
+      "mix": 1.0,
+      "correct": 931
+    }
+  ],
+  "selected": {
+    "mix": 0.75,
+    "ridge": 1.0,
+    "threshold": -0.20826311471571193,
+    "lexical_scale": 5.54148929381036,
+    "semantic_scale": 0.6211769573575876
+  },
+  "systems": {
+    "compiled": {
+      "correct": 717,
+      "median_ms": 0.1573999998072395,
+      "bytes_with_tokenizer": 21355506
+    },
+    "frozen_reversal": {
+      "correct": 422,
+      "median_ms": 0.8015999992494471,
+      "bytes_with_tokenizer": 18909051
+    },
+    "lexical": {
+      "correct": 706,
+      "median_ms": 0.10305000068910886,
+      "bytes_with_tokenizer": 20855181
+    },
+    "parent_fixed_AB": {
+      "correct": 760,
+      "median_ms": 66.80929999947693,
+      "checkpoint_bytes": 3475544083
+    }
+  },
+  "paired_vs_compiled": {
+    "compiled": {
+      "compiled_only": 0,
+      "other_only": 0
+    },
+    "frozen_reversal": {
+      "compiled_only": 384,
+      "other_only": 89
+    },
+    "lexical": {
+      "compiled_only": 35,
+      "other_only": 24
+    },
+    "parent_fixed_AB": {
+      "compiled_only": 71,
+      "other_only": 114
+    }
+  }
+}

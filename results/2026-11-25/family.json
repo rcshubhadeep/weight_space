@@ -1,0 +1,489 @@
+{
+  "teacher": {
+    "checkpoint": "LiquidAI/LFM3-1.7B@ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+    "parameters": 1728801536,
+    "device": "cuda",
+    "dtype": "torch.float16"
+  },
+  "tasks": {
+    "sentiment": {
+      "lineage": {
+        "child": {
+          "parent": "teacher",
+          "width": 16,
+          "parameters": 8225,
+          "checkpoint": "sentiment_child.safetensors",
+          "min_vocabulary_coverage": null
+        },
+        "grandchild": {
+          "parent": "child",
+          "width": 8,
+          "parameters": 4113,
+          "checkpoint": "sentiment_grandchild.safetensors",
+          "min_vocabulary_coverage": 0.5882353186607361
+        }
+      },
+      "held_out": {
+        "new_templates": {
+          "teacher": {
+            "gold_accuracy": 1.0,
+            "teacher_agreement": 1.0,
+            "n": 96
+          },
+          "child": {
+            "gold_accuracy": 0.9895833134651184,
+            "teacher_agreement": 0.9895833134651184,
+            "n": 96,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 1.0
+            }
+          },
+          "grandchild": {
+            "gold_accuracy": 0.9791666865348816,
+            "teacher_agreement": 0.9791666865348816,
+            "n": 96,
+            "routing": {
+              "specialist_count": 96,
+              "specialist_accuracy": 0.9791666865348816,
+              "accuracy_with_teacher_fallback": 0.9791666865348816
+            }
+          },
+          "supervised_control": {
+            "gold_accuracy": 0.9791666865348816,
+            "teacher_agreement": 0.9791666865348816,
+            "n": 96
+          },
+          "automatic_routing": {
+            "counts": {
+              "child": 0,
+              "grandchild": 96,
+              "teacher": 0
+            },
+            "accuracy": 0.9791666865348816
+          }
+        },
+        "new_vocabulary": {
+          "teacher": {
+            "gold_accuracy": 1.0,
+            "teacher_agreement": 1.0,
+            "n": 64
+          },
+          "child": {
+            "gold_accuracy": 0.421875,
+            "teacher_agreement": 0.421875,
+            "n": 64,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 1.0
+            }
+          },
+          "grandchild": {
+            "gold_accuracy": 0.421875,
+            "teacher_agreement": 0.421875,
+            "n": 64,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 1.0
+            }
+          },
+          "supervised_control": {
+            "gold_accuracy": 0.46875,
+            "teacher_agreement": 0.46875,
+            "n": 64
+          },
+          "automatic_routing": {
+            "counts": {
+              "child": 0,
+              "grandchild": 0,
+              "teacher": 64
+            },
+            "accuracy": 1.0
+          }
+        },
+        "novel_target_only": {
+          "teacher": {
+            "gold_accuracy": 1.0,
+            "teacher_agreement": 1.0,
+            "n": 64
+          },
+          "child": {
+            "gold_accuracy": 0.359375,
+            "teacher_agreement": 0.359375,
+            "n": 64,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 1.0
+            }
+          },
+          "grandchild": {
+            "gold_accuracy": 0.34375,
+            "teacher_agreement": 0.34375,
+            "n": 64,
+            "routing": {
+              "specialist_count": 44,
+              "specialist_accuracy": 0.40909090638160706,
+              "accuracy_with_teacher_fallback": 0.59375
+            }
+          },
+          "supervised_control": {
+            "gold_accuracy": 0.34375,
+            "teacher_agreement": 0.34375,
+            "n": 64
+          },
+          "automatic_routing": {
+            "counts": {
+              "child": 0,
+              "grandchild": 44,
+              "teacher": 20
+            },
+            "accuracy": 0.59375
+          }
+        }
+      },
+      "batch_one_median_ms": {
+        "teacher": 87.98359999491367,
+        "child": 0.19824999617412686,
+        "grandchild": 0.1866999955382198
+      }
+    },
+    "urgency": {
+      "lineage": {
+        "child": {
+          "parent": "teacher",
+          "width": 16,
+          "parameters": 8225,
+          "checkpoint": "urgency_child.safetensors",
+          "min_vocabulary_coverage": null
+        },
+        "grandchild": {
+          "parent": "child",
+          "width": 8,
+          "parameters": 4113,
+          "checkpoint": "urgency_grandchild.safetensors",
+          "min_vocabulary_coverage": null
+        }
+      },
+      "held_out": {
+        "new_templates": {
+          "teacher": {
+            "gold_accuracy": 0.78125,
+            "teacher_agreement": 1.0,
+            "n": 96
+          },
+          "child": {
+            "gold_accuracy": 0.90625,
+            "teacher_agreement": 0.7708333134651184,
+            "n": 96,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 0.78125
+            }
+          },
+          "grandchild": {
+            "gold_accuracy": 0.84375,
+            "teacher_agreement": 0.7708333134651184,
+            "n": 96,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 0.78125
+            }
+          },
+          "supervised_control": {
+            "gold_accuracy": 1.0,
+            "teacher_agreement": 0.78125,
+            "n": 96
+          },
+          "automatic_routing": {
+            "counts": {
+              "child": 0,
+              "grandchild": 0,
+              "teacher": 96
+            },
+            "accuracy": 0.78125
+          }
+        },
+        "new_vocabulary": {
+          "teacher": {
+            "gold_accuracy": 0.5625,
+            "teacher_agreement": 1.0,
+            "n": 64
+          },
+          "child": {
+            "gold_accuracy": 0.609375,
+            "teacher_agreement": 0.640625,
+            "n": 64,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 0.5625
+            }
+          },
+          "grandchild": {
+            "gold_accuracy": 0.5625,
+            "teacher_agreement": 0.84375,
+            "n": 64,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 0.5625
+            }
+          },
+          "supervised_control": {
+            "gold_accuracy": 0.671875,
+            "teacher_agreement": 0.265625,
+            "n": 64
+          },
+          "automatic_routing": {
+            "counts": {
+              "child": 0,
+              "grandchild": 0,
+              "teacher": 64
+            },
+            "accuracy": 0.5625
+          }
+        },
+        "novel_target_only": {
+          "teacher": {
+            "gold_accuracy": 0.5625,
+            "teacher_agreement": 1.0,
+            "n": 64
+          },
+          "child": {
+            "gold_accuracy": 0.703125,
+            "teacher_agreement": 0.703125,
+            "n": 64,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 0.5625
+            }
+          },
+          "grandchild": {
+            "gold_accuracy": 0.640625,
+            "teacher_agreement": 0.765625,
+            "n": 64,
+            "routing": {
+              "specialist_count": 0,
+              "specialist_accuracy": null,
+              "accuracy_with_teacher_fallback": 0.5625
+            }
+          },
+          "supervised_control": {
+            "gold_accuracy": 0.6875,
+            "teacher_agreement": 0.34375,
+            "n": 64
+          },
+          "automatic_routing": {
+            "counts": {
+              "child": 0,
+              "grandchild": 0,
+              "teacher": 64
+            },
+            "accuracy": 0.5625
+          }
+        }
+      },
+      "batch_one_median_ms": {
+        "teacher": 109.2087500001071,
+        "child": 0.2065499866148457,
+        "grandchild": 0.20429998403415084
+      }
+    }
+  },
+  "known_feature_indices": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    23,
+    24,
+    26,
+    29,
+    30,
+    32,
+    35,
+    43,
+    44,
+    52,
+    53,
+    55,
+    56,
+    59,
+    61,
+    63,
+    70,
+    75,
+    77,
+    78,
+    81,
+    85,
+    87,
+    96,
+    97,
+    98,
+    100,
+    105,
+    110,
+    111,
+    120,
+    125,
+    126,
+    128,
+    129,
+    130,
+    133,
+    136,
+    139,
+    140,
+    142,
+    143,
+    145,
+    147,
+    148,
+    150,
+    151,
+    152,
+    154,
+    157,
+    159,
+    161,
+    163,
+    166,
+    168,
+    169,
+    170,
+    174,
+    176,
+    178,
+    182,
+    185,
+    191,
+    192,
+    195,
+    198,
+    201,
+    206,
+    210,
+    213,
+    214,
+    219,
+    226,
+    227,
+    229,
+    230,
+    233,
+    235,
+    236,
+    241,
+    247,
+    252,
+    253,
+    256,
+    258,
+    261,
+    262,
+    264,
+    266,
+    269,
+    271,
+    273,
+    274,
+    276,
+    278,
+    285,
+    287,
+    288,
+    289,
+    293,
+    294,
+    295,
+    296,
+    299,
+    306,
+    309,
+    311,
+    317,
+    320,
+    324,
+    326,
+    329,
+    331,
+    334,
+    336,
+    341,
+    342,
+    349,
+    350,
+    351,
+    352,
+    354,
+    362,
+    366,
+    370,
+    371,
+    375,
+    378,
+    381,
+    383,
+    384,
+    385,
+    387,
+    390,
+    392,
+    393,
+    397,
+    399,
+    400,
+    405,
+    411,
+    413,
+    414,
+    421,
+    423,
+    424,
+    427,
+    432,
+    434,
+    435,
+    438,
+    439,
+    442,
+    443,
+    444,
+    446,
+    448,
+    451,
+    456,
+    463,
+    464,
+    465,
+    466,
+    475,
+    479,
+    480,
+    486,
+    490,
+    492,
+    493,
+    500,
+    506,
+    507,
+    509,
+    511
+  ]
+}

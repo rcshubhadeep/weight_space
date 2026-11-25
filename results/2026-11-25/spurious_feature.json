@@ -1,0 +1,243 @@
+{
+  "seed": 41,
+  "setup": "Training correlation 95%; independent calibration, validation and balanced held-out test sets.",
+  "method": "Conflict-set class activation contrast; rank-one output-weight edit; validation selects strength.",
+  "train_loss": 0.049205053597688675,
+  "validation_sweep": [
+    {
+      "strength": 0.0,
+      "accuracy": 0.8349999785423279
+    },
+    {
+      "strength": 0.25,
+      "accuracy": 0.8374999761581421
+    },
+    {
+      "strength": 0.5,
+      "accuracy": 0.8387500047683716
+    },
+    {
+      "strength": 1.0,
+      "accuracy": 0.8412500023841858
+    },
+    {
+      "strength": 2.0,
+      "accuracy": 0.8362500071525574
+    },
+    {
+      "strength": 4.0,
+      "accuracy": 0.8387500047683716
+    },
+    {
+      "strength": 8.0,
+      "accuracy": 0.8374999761581421
+    },
+    {
+      "strength": 16.0,
+      "accuracy": 0.8399999737739563
+    }
+  ],
+  "selected_strength": 1.0,
+  "base_test": {
+    "overall": {
+      "n": 4000,
+      "accuracy": 0.874750018119812
+    },
+    "agree": {
+      "n": 2017,
+      "accuracy": 0.9955379366874695
+    },
+    "conflict": {
+      "n": 1983,
+      "accuracy": 0.7518910765647888
+    }
+  },
+  "guided_test": {
+    "overall": {
+      "n": 4000,
+      "accuracy": 0.8757500052452087
+    },
+    "agree": {
+      "n": 2017,
+      "accuracy": 0.9935547709465027
+    },
+    "conflict": {
+      "n": 1983,
+      "accuracy": 0.7559253573417664
+    }
+  },
+  "random_direction_controls": [
+    {
+      "strength": 0.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.874750018119812
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9955379366874695
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7518910765647888
+        }
+      }
+    },
+    {
+      "strength": 0.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.874750018119812
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9955379366874695
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7518910765647888
+        }
+      }
+    },
+    {
+      "strength": 0.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.874750018119812
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9955379366874695
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7518910765647888
+        }
+      }
+    },
+    {
+      "strength": 1.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.8765000104904175
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9950421452522278
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7559253573417664
+        }
+      }
+    },
+    {
+      "strength": 4.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.8837500214576721
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.993058979511261
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7725667953491211
+        }
+      }
+    },
+    {
+      "strength": 1.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.8604999780654907
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9885969161987305
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7302067279815674
+        }
+      }
+    },
+    {
+      "strength": 0.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.874750018119812
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9955379366874695
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7518910765647888
+        }
+      }
+    },
+    {
+      "strength": 0.5,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.8730000257492065
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9950421452522278
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7488653659820557
+        }
+      }
+    },
+    {
+      "strength": 1.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.8604999780654907
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9905800819396973
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7281895875930786
+        }
+      }
+    },
+    {
+      "strength": 0.0,
+      "test": {
+        "overall": {
+          "n": 4000,
+          "accuracy": 0.874750018119812
+        },
+        "agree": {
+          "n": 2017,
+          "accuracy": 0.9955379366874695
+        },
+        "conflict": {
+          "n": 1983,
+          "accuracy": 0.7518910765647888
+        }
+      }
+    }
+  ],
+  "changed_weights": 20,
+  "total_parameters": 658
+}

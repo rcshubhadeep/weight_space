@@ -1,0 +1,236 @@
+{
+  "checkpoint": "LiquidAI/LFM3-1.7B@ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "parameter": "model.layers.23.feed_forward.w2.weight",
+  "parameter_shape": [
+    2048,
+    7680
+  ],
+  "dtype": "torch.float16",
+  "selected_scale": 1.0,
+  "validation_trials": [
+    {
+      "scale": 0.0,
+      "urgency_accuracy": 0.5,
+      "sentiment_accuracy": 0.96875,
+      "top1_agreement": 1.0,
+      "mean_next_token_kl_nats": 0.0,
+      "max_next_token_kl_nats": 0.0
+    },
+    {
+      "scale": 0.25,
+      "urgency_accuracy": 0.515625,
+      "sentiment_accuracy": 1.0,
+      "top1_agreement": 0.96875,
+      "mean_next_token_kl_nats": 0.002618759172037244,
+      "max_next_token_kl_nats": 0.03651772812008858
+    },
+    {
+      "scale": 0.5,
+      "urgency_accuracy": 0.515625,
+      "sentiment_accuracy": 1.0,
+      "top1_agreement": 0.96875,
+      "mean_next_token_kl_nats": 0.010571718215942383,
+      "max_next_token_kl_nats": 0.1421174556016922
+    },
+    {
+      "scale": 1.0,
+      "urgency_accuracy": 0.609375,
+      "sentiment_accuracy": 1.0,
+      "top1_agreement": 0.96875,
+      "mean_next_token_kl_nats": 0.04131382703781128,
+      "max_next_token_kl_nats": 0.5430325269699097
+    },
+    {
+      "scale": 2.0,
+      "urgency_accuracy": 0.78125,
+      "sentiment_accuracy": 0.96875,
+      "top1_agreement": 0.9375,
+      "mean_next_token_kl_nats": 0.152134969830513,
+      "max_next_token_kl_nats": 1.6919910907745361
+    }
+  ],
+  "held_out": {
+    "guarded": {
+      "changed_entries_after_rounding": 14976767,
+      "delta_frobenius_before_rounding": 3.0612356662750244,
+      "outcomes": {
+        "urgency_new_templates": {
+          "n": 64,
+          "top1_agreement": 0.78125,
+          "mean_next_token_kl_nats": 0.3147575855255127,
+          "max_next_token_kl_nats": 3.0656018257141113,
+          "base_accuracy": 0.734375,
+          "edited_accuracy": 0.921875
+        },
+        "urgency_new_phrases": {
+          "n": 64,
+          "top1_agreement": 0.625,
+          "mean_next_token_kl_nats": 0.44066059589385986,
+          "max_next_token_kl_nats": 3.2123897075653076,
+          "base_accuracy": 0.53125,
+          "edited_accuracy": 0.78125
+        },
+        "sentiment": {
+          "n": 64,
+          "top1_agreement": 0.984375,
+          "mean_next_token_kl_nats": 0.0430106446146965,
+          "max_next_token_kl_nats": 0.4438292384147644,
+          "base_accuracy": 1.0,
+          "edited_accuracy": 0.984375
+        },
+        "general_next_token": {
+          "n": 10,
+          "top1_agreement": 0.8999999761581421,
+          "mean_next_token_kl_nats": 0.006836768239736557,
+          "max_next_token_kl_nats": 0.04358303174376488
+        }
+      }
+    },
+    "unguarded_norm_matched": {
+      "changed_entries_after_rounding": 14765356,
+      "delta_frobenius_before_rounding": 3.0612356662750244,
+      "outcomes": {
+        "urgency_new_templates": {
+          "n": 64,
+          "top1_agreement": 0.640625,
+          "mean_next_token_kl_nats": 1.2883682250976562,
+          "max_next_token_kl_nats": 10.170242309570312,
+          "base_accuracy": 0.734375,
+          "edited_accuracy": 0.953125
+        },
+        "urgency_new_phrases": {
+          "n": 64,
+          "top1_agreement": 0.421875,
+          "mean_next_token_kl_nats": 1.977424144744873,
+          "max_next_token_kl_nats": 10.216327667236328,
+          "base_accuracy": 0.53125,
+          "edited_accuracy": 0.84375
+        },
+        "sentiment": {
+          "n": 64,
+          "top1_agreement": 0.5,
+          "mean_next_token_kl_nats": 2.8920135498046875,
+          "max_next_token_kl_nats": 10.745058059692383,
+          "base_accuracy": 1.0,
+          "edited_accuracy": 0.5
+        },
+        "general_next_token": {
+          "n": 10,
+          "top1_agreement": 0.8999999761581421,
+          "mean_next_token_kl_nats": 0.046996135264635086,
+          "max_next_token_kl_nats": 0.17065204679965973
+        }
+      }
+    },
+    "random_key_1": {
+      "changed_entries_after_rounding": 15280729,
+      "delta_frobenius_before_rounding": 3.0612359046936035,
+      "outcomes": {
+        "urgency_new_templates": {
+          "n": 64,
+          "top1_agreement": 0.953125,
+          "mean_next_token_kl_nats": 0.008328826166689396,
+          "max_next_token_kl_nats": 0.07727804780006409,
+          "base_accuracy": 0.734375,
+          "edited_accuracy": 0.75
+        },
+        "urgency_new_phrases": {
+          "n": 64,
+          "top1_agreement": 0.9375,
+          "mean_next_token_kl_nats": 0.00428013363853097,
+          "max_next_token_kl_nats": 0.024929113686084747,
+          "base_accuracy": 0.53125,
+          "edited_accuracy": 0.53125
+        },
+        "sentiment": {
+          "n": 64,
+          "top1_agreement": 1.0,
+          "mean_next_token_kl_nats": 0.015182198956608772,
+          "max_next_token_kl_nats": 0.21597573161125183,
+          "base_accuracy": 1.0,
+          "edited_accuracy": 1.0
+        },
+        "general_next_token": {
+          "n": 10,
+          "top1_agreement": 1.0,
+          "mean_next_token_kl_nats": 0.006766162812709808,
+          "max_next_token_kl_nats": 0.05068526789546013
+        }
+      }
+    },
+    "random_key_2": {
+      "changed_entries_after_rounding": 15293531,
+      "delta_frobenius_before_rounding": 3.0612354278564453,
+      "outcomes": {
+        "urgency_new_templates": {
+          "n": 64,
+          "top1_agreement": 0.90625,
+          "mean_next_token_kl_nats": 0.04476698860526085,
+          "max_next_token_kl_nats": 0.3317355215549469,
+          "base_accuracy": 0.734375,
+          "edited_accuracy": 0.75
+        },
+        "urgency_new_phrases": {
+          "n": 64,
+          "top1_agreement": 0.890625,
+          "mean_next_token_kl_nats": 0.02934195287525654,
+          "max_next_token_kl_nats": 0.2055417001247406,
+          "base_accuracy": 0.53125,
+          "edited_accuracy": 0.53125
+        },
+        "sentiment": {
+          "n": 64,
+          "top1_agreement": 1.0,
+          "mean_next_token_kl_nats": 0.014028020203113556,
+          "max_next_token_kl_nats": 0.16808834671974182,
+          "base_accuracy": 1.0,
+          "edited_accuracy": 1.0
+        },
+        "general_next_token": {
+          "n": 10,
+          "top1_agreement": 0.800000011920929,
+          "mean_next_token_kl_nats": 0.0036838080268353224,
+          "max_next_token_kl_nats": 0.029102826490998268
+        }
+      }
+    },
+    "random_key_3": {
+      "changed_entries_after_rounding": 15295489,
+      "delta_frobenius_before_rounding": 3.0612356662750244,
+      "outcomes": {
+        "urgency_new_templates": {
+          "n": 64,
+          "top1_agreement": 0.953125,
+          "mean_next_token_kl_nats": 0.0014788429252803326,
+          "max_next_token_kl_nats": 0.009568871930241585,
+          "base_accuracy": 0.734375,
+          "edited_accuracy": 0.75
+        },
+        "urgency_new_phrases": {
+          "n": 64,
+          "top1_agreement": 0.96875,
+          "mean_next_token_kl_nats": 0.0004727623309008777,
+          "max_next_token_kl_nats": 0.003433000296354294,
+          "base_accuracy": 0.53125,
+          "edited_accuracy": 0.53125
+        },
+        "sentiment": {
+          "n": 64,
+          "top1_agreement": 1.0,
+          "mean_next_token_kl_nats": 0.005081861279904842,
+          "max_next_token_kl_nats": 0.037255045026540756,
+          "base_accuracy": 1.0,
+          "edited_accuracy": 1.0
+        },
+        "general_next_token": {
+          "n": 10,
+          "top1_agreement": 1.0,
+          "mean_next_token_kl_nats": 0.0008090431801974773,
+          "max_next_token_kl_nats": 0.005169963464140892
+        }
+      }
+    }
+  },
+  "patch_bytes": 39328,
+  "restored": true
+}

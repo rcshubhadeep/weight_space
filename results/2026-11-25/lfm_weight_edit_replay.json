@@ -1,0 +1,36 @@
+{
+  "changed_entries_after_rounding": 14976767,
+  "outcomes": {
+    "urgency_new_templates": {
+      "n": 64,
+      "top1_agreement": 0.78125,
+      "mean_next_token_kl_nats": 0.3147575855255127,
+      "max_next_token_kl_nats": 3.0656018257141113,
+      "base_accuracy": 0.734375,
+      "edited_accuracy": 0.921875
+    },
+    "urgency_new_phrases": {
+      "n": 64,
+      "top1_agreement": 0.625,
+      "mean_next_token_kl_nats": 0.44066059589385986,
+      "max_next_token_kl_nats": 3.2123897075653076,
+      "base_accuracy": 0.53125,
+      "edited_accuracy": 0.78125
+    },
+    "sentiment": {
+      "n": 64,
+      "top1_agreement": 0.984375,
+      "mean_next_token_kl_nats": 0.0430106446146965,
+      "max_next_token_kl_nats": 0.4438292384147644,
+      "base_accuracy": 1.0,
+      "edited_accuracy": 0.984375
+    },
+    "general_next_token": {
+      "n": 10,
+      "top1_agreement": 0.8999999761581421,
+      "mean_next_token_kl_nats": 0.006836768239736557,
+      "max_next_token_kl_nats": 0.04358303174376488
+    }
+  },
+  "restored": true
+}

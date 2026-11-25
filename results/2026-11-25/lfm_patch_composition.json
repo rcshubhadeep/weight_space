@@ -1,0 +1,253 @@
+{
+  "model_revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "extraction_revision": "58f0d07d46cd58fcfedc836c0011653872eb10a9",
+  "base_matrix_unchanged": true,
+  "variants": {
+    "independent": {
+      "calibration": {
+        "urgency": {
+          "scale": 2.0,
+          "accuracy_by_scale": {
+            "0.0": 0.5,
+            "0.25": 0.515625,
+            "0.5": 0.515625,
+            "1.0": 0.609375,
+            "2.0": 0.78125
+          },
+          "effective_key_norm": 6.118918418884277
+        },
+        "extraction": {
+          "scale": 1.0,
+          "accuracy_by_scale": {
+            "0.0": 0.8333333134651184,
+            "0.25": 0.8333333134651184,
+            "0.5": 0.8333333134651184,
+            "1.0": 0.84375,
+            "2.0": 0.8020833134651184
+          },
+          "effective_key_norm": 2.4763355255126953
+        }
+      },
+      "fit_anchors": {
+        "urgency": {
+          "prompts": 64,
+          "base_accuracy": 0.8125,
+          "own_patch_accuracy": 1.0,
+          "combined_accuracy": 1.0,
+          "answer_changes_from_own": 0,
+          "max_raw_cross_patch_norm": 1.8593111038208008,
+          "median_raw_cross_patch_norm": 0.4930630624294281,
+          "real_arithmetic_margin_check_passes": 61,
+          "fp16_answer_changes_among_margin_check_passes": 0
+        },
+        "extraction": {
+          "prompts": 96,
+          "base_accuracy": 0.6979166865348816,
+          "own_patch_accuracy": 0.96875,
+          "combined_accuracy": 0.6145833134651184,
+          "answer_changes_from_own": 38,
+          "max_raw_cross_patch_norm": 9.969167709350586,
+          "median_raw_cross_patch_norm": 2.4569482803344727,
+          "real_arithmetic_margin_check_passes": 6,
+          "fp16_answer_changes_among_margin_check_passes": 0
+        }
+      },
+      "held_out": {
+        "urgency": {
+          "prompts": 128,
+          "base_accuracy": 0.5625,
+          "own_patch_accuracy": 0.9296875,
+          "combined_accuracy": 0.9296875,
+          "answer_changes_from_own": 2,
+          "max_raw_cross_patch_norm": 1.9085646867752075,
+          "median_raw_cross_patch_norm": 0.582528293132782,
+          "real_arithmetic_margin_check_passes": 99,
+          "fp16_answer_changes_among_margin_check_passes": 0,
+          "live_audit": {
+            "prompts": 16,
+            "matching_choices": 16
+          }
+        },
+        "extraction": {
+          "prompts": 192,
+          "base_accuracy": 0.7916666865348816,
+          "own_patch_accuracy": 0.8020833134651184,
+          "combined_accuracy": 0.5520833134651184,
+          "answer_changes_from_own": 80,
+          "max_raw_cross_patch_norm": 10.666454315185547,
+          "median_raw_cross_patch_norm": 2.3496954441070557,
+          "real_arithmetic_margin_check_passes": 28,
+          "fp16_answer_changes_among_margin_check_passes": 0,
+          "live_audit": {
+            "prompts": 16,
+            "matching_choices": 16
+          }
+        }
+      }
+    },
+    "cross_protected": {
+      "calibration": {
+        "urgency": {
+          "scale": 2.0,
+          "accuracy_by_scale": {
+            "0.0": 0.5,
+            "0.25": 0.515625,
+            "0.5": 0.53125,
+            "1.0": 0.625,
+            "2.0": 0.796875
+          },
+          "effective_key_norm": 8.002819061279297
+        },
+        "extraction": {
+          "scale": 0.0,
+          "accuracy_by_scale": {
+            "0.0": 0.8333333134651184,
+            "0.25": 0.8229166865348816,
+            "0.5": 0.8333333134651184,
+            "1.0": 0.8125,
+            "2.0": 0.7604166865348816
+          },
+          "effective_key_norm": 0.0
+        }
+      },
+      "fit_anchors": {
+        "urgency": {
+          "prompts": 64,
+          "base_accuracy": 0.8125,
+          "own_patch_accuracy": 1.0,
+          "combined_accuracy": 1.0,
+          "answer_changes_from_own": 0,
+          "max_raw_cross_patch_norm": 0.0,
+          "median_raw_cross_patch_norm": 0.0,
+          "real_arithmetic_margin_check_passes": 64,
+          "fp16_answer_changes_among_margin_check_passes": 0
+        },
+        "extraction": {
+          "prompts": 96,
+          "base_accuracy": 0.6979166865348816,
+          "own_patch_accuracy": 0.6979166865348816,
+          "combined_accuracy": 0.6979166865348816,
+          "answer_changes_from_own": 0,
+          "max_raw_cross_patch_norm": 0.0009470581426285207,
+          "median_raw_cross_patch_norm": 0.00024366377328988165,
+          "real_arithmetic_margin_check_passes": 96,
+          "fp16_answer_changes_among_margin_check_passes": 0
+        }
+      },
+      "held_out": {
+        "urgency": {
+          "prompts": 128,
+          "base_accuracy": 0.5625,
+          "own_patch_accuracy": 0.875,
+          "combined_accuracy": 0.875,
+          "answer_changes_from_own": 0,
+          "max_raw_cross_patch_norm": 0.0,
+          "median_raw_cross_patch_norm": 0.0,
+          "real_arithmetic_margin_check_passes": 128,
+          "fp16_answer_changes_among_margin_check_passes": 0,
+          "live_audit": {
+            "prompts": 16,
+            "matching_choices": 16
+          }
+        },
+        "extraction": {
+          "prompts": 192,
+          "base_accuracy": 0.7916666865348816,
+          "own_patch_accuracy": 0.7916666865348816,
+          "combined_accuracy": 0.7291666865348816,
+          "answer_changes_from_own": 38,
+          "max_raw_cross_patch_norm": 3.9615440368652344,
+          "median_raw_cross_patch_norm": 0.7802538275718689,
+          "real_arithmetic_margin_check_passes": 78,
+          "fp16_answer_changes_among_margin_check_passes": 0,
+          "live_audit": {
+            "prompts": 16,
+            "matching_choices": 16
+          }
+        }
+      }
+    },
+    "cross_protected_nonzero_probe": {
+      "calibration": {
+        "urgency": {
+          "scale": 2.0,
+          "accuracy_by_scale": {
+            "0.0": 0.5,
+            "0.25": 0.515625,
+            "0.5": 0.53125,
+            "1.0": 0.625,
+            "2.0": 0.796875
+          },
+          "effective_key_norm": 8.002819061279297
+        },
+        "extraction": {
+          "scale": 0.5,
+          "accuracy_by_scale": {
+            "0.0": 0.8333333134651184,
+            "0.25": 0.8229166865348816,
+            "0.5": 0.8333333134651184,
+            "1.0": 0.8125,
+            "2.0": 0.7604166865348816
+          },
+          "effective_key_norm": 1.6020673513412476
+        }
+      },
+      "fit_anchors": {
+        "urgency": {
+          "prompts": 64,
+          "base_accuracy": 0.8125,
+          "own_patch_accuracy": 1.0,
+          "combined_accuracy": 1.0,
+          "answer_changes_from_own": 0,
+          "max_raw_cross_patch_norm": 0.00011003016697941348,
+          "median_raw_cross_patch_norm": 6.651877629337832e-05,
+          "real_arithmetic_margin_check_passes": 64,
+          "fp16_answer_changes_among_margin_check_passes": 0
+        },
+        "extraction": {
+          "prompts": 96,
+          "base_accuracy": 0.6979166865348816,
+          "own_patch_accuracy": 0.84375,
+          "combined_accuracy": 0.84375,
+          "answer_changes_from_own": 0,
+          "max_raw_cross_patch_norm": 0.0009470581426285207,
+          "median_raw_cross_patch_norm": 0.00024366377328988165,
+          "real_arithmetic_margin_check_passes": 96,
+          "fp16_answer_changes_among_margin_check_passes": 0
+        }
+      },
+      "held_out": {
+        "urgency": {
+          "prompts": 128,
+          "base_accuracy": 0.5625,
+          "own_patch_accuracy": 0.875,
+          "combined_accuracy": 0.875,
+          "answer_changes_from_own": 0,
+          "max_raw_cross_patch_norm": 0.38671472668647766,
+          "median_raw_cross_patch_norm": 0.11961960047483444,
+          "real_arithmetic_margin_check_passes": 126,
+          "fp16_answer_changes_among_margin_check_passes": 0,
+          "live_audit": {
+            "prompts": 16,
+            "matching_choices": 16
+          }
+        },
+        "extraction": {
+          "prompts": 192,
+          "base_accuracy": 0.7916666865348816,
+          "own_patch_accuracy": 0.8072916865348816,
+          "combined_accuracy": 0.765625,
+          "answer_changes_from_own": 40,
+          "max_raw_cross_patch_norm": 3.9615440368652344,
+          "median_raw_cross_patch_norm": 0.7802538275718689,
+          "real_arithmetic_margin_check_passes": 81,
+          "fp16_answer_changes_among_margin_check_passes": 0,
+          "live_audit": {
+            "prompts": 16,
+            "matching_choices": 16
+          }
+        }
+      }
+    }
+  }
+}

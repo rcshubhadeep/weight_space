@@ -1,0 +1,89 @@
+{
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "fit_messages": 36,
+  "held_out_messages": 64,
+  "runs": [
+    {
+      "mode": "inherited",
+      "width": 1,
+      "fit_margin": 0.3712186499936232,
+      "duality_gap": 0.0,
+      "fit_correct": 36,
+      "held_out_correct": 30,
+      "both_correct": 0
+    },
+    {
+      "mode": "inherited",
+      "width": 4,
+      "fit_margin": 0.38092729232096456,
+      "duality_gap": -8.881784197001252e-16,
+      "fit_correct": 36,
+      "held_out_correct": 32,
+      "both_correct": 0
+    },
+    {
+      "mode": "inherited",
+      "width": 16,
+      "fit_margin": 0.47517129648322376,
+      "duality_gap": 3.552713678800501e-14,
+      "fit_correct": 36,
+      "held_out_correct": 23,
+      "both_correct": 0
+    },
+    {
+      "mode": "permuted_vocabulary",
+      "width": 1,
+      "fit_margin": 0.000387931636883998,
+      "duality_gap": 0.0,
+      "fit_correct": 36,
+      "held_out_correct": 32,
+      "both_correct": 0
+    },
+    {
+      "mode": "permuted_vocabulary",
+      "width": 4,
+      "fit_margin": 0.16391097010039957,
+      "duality_gap": 0.0,
+      "fit_correct": 36,
+      "held_out_correct": 34,
+      "both_correct": 4
+    },
+    {
+      "mode": "permuted_vocabulary",
+      "width": 16,
+      "fit_margin": 0.31333487090529255,
+      "duality_gap": -1.3322676295501878e-15,
+      "fit_correct": 36,
+      "held_out_correct": 28,
+      "both_correct": 1
+    },
+    {
+      "mode": "current_token_only",
+      "width": 1,
+      "fit_margin": -2.220446049250313e-16,
+      "duality_gap": 6.661338147750939e-16,
+      "fit_correct": 18,
+      "held_out_correct": 32,
+      "both_correct": 0
+    },
+    {
+      "mode": "current_token_only",
+      "width": 4,
+      "fit_margin": -2.220446049250313e-16,
+      "duality_gap": 6.661338147750939e-16,
+      "fit_correct": 18,
+      "held_out_correct": 32,
+      "both_correct": 0
+    },
+    {
+      "mode": "current_token_only",
+      "width": 16,
+      "fit_margin": -2.9753977059954195e-14,
+      "duality_gap": 3.1530333899354446e-14,
+      "fit_correct": 18,
+      "held_out_correct": 32,
+      "both_correct": 0
+    }
+  ],
+  "child_bytes": 16005600
+}

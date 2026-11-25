@@ -1,0 +1,103 @@
+{
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "modes": {
+    "inherited": {
+      "first": 18.002720445056916,
+      "second": 8.435650347350868e-16,
+      "threshold": -0.0008861877852016025,
+      "suites": {
+        "fit": {
+          "messages": 36,
+          "correct": 36,
+          "both_correct": 18,
+          "ordered_pairs": 18
+        },
+        "previous": {
+          "messages": 64,
+          "correct": 64,
+          "both_correct": 32,
+          "ordered_pairs": 32
+        },
+        "food": {
+          "messages": 72,
+          "correct": 48,
+          "both_correct": 18,
+          "ordered_pairs": 18
+        },
+        "negation": {
+          "messages": 64,
+          "correct": 12,
+          "both_correct": 0,
+          "ordered_pairs": 0
+        }
+      }
+    },
+    "shuffled_pairs": {
+      "first": 2.8919299400594616,
+      "second": 2.10648343486369,
+      "threshold": -0.012060258634543667,
+      "suites": {
+        "fit": {
+          "messages": 36,
+          "correct": 8,
+          "both_correct": 2,
+          "ordered_pairs": 2
+        },
+        "previous": {
+          "messages": 64,
+          "correct": 26,
+          "both_correct": 0,
+          "ordered_pairs": 4
+        },
+        "food": {
+          "messages": 72,
+          "correct": 45,
+          "both_correct": 18,
+          "ordered_pairs": 18
+        },
+        "negation": {
+          "messages": 64,
+          "correct": 36,
+          "both_correct": 4,
+          "ordered_pairs": 16
+        }
+      }
+    },
+    "permuted_vocab": {
+      "first": 17.706748947365476,
+      "second": 2.7373816860419205e-16,
+      "threshold": 0.004172821011808183,
+      "suites": {
+        "fit": {
+          "messages": 36,
+          "correct": 36,
+          "both_correct": 18,
+          "ordered_pairs": 18
+        },
+        "previous": {
+          "messages": 64,
+          "correct": 32,
+          "both_correct": 0,
+          "ordered_pairs": 8
+        },
+        "food": {
+          "messages": 72,
+          "correct": 36,
+          "both_correct": 0,
+          "ordered_pairs": 19
+        },
+        "negation": {
+          "messages": 64,
+          "correct": 34,
+          "both_correct": 2,
+          "ordered_pairs": 24
+        }
+      }
+    }
+  },
+  "child_bytes": 1000416,
+  "swap_audit": {
+    "rational_equalities": 32,
+    "max_float32_swap_error": 9.612480811327373e-09
+  }
+}

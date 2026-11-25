@@ -1,0 +1,48 @@
+{
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "bytes": 1000344,
+  "inherited": {
+    "fit": {
+      "n": 36,
+      "correct": 36,
+      "both_correct": 18
+    },
+    "held_out": {
+      "n": 64,
+      "correct": 64,
+      "both_correct": 32
+    },
+    "distance": {
+      "n": 64,
+      "correct": 57,
+      "both_correct": 25
+    },
+    "negated_outcome": {
+      "n": 64,
+      "correct": 13,
+      "both_correct": 0
+    }
+  },
+  "permuted_vocabulary": {
+    "fit": {
+      "n": 36,
+      "correct": 36,
+      "both_correct": 18
+    },
+    "held_out": {
+      "n": 64,
+      "correct": 26,
+      "both_correct": 0
+    },
+    "distance": {
+      "n": 64,
+      "correct": 39,
+      "both_correct": 9
+    },
+    "negated_outcome": {
+      "n": 64,
+      "correct": 44,
+      "both_correct": 13
+    }
+  }
+}

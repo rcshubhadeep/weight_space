@@ -1,0 +1,76 @@
+{
+  "snapshot_date": "2026-11-25",
+  "report_hash_format": "SHA-256 of ASCII JSON with sorted keys and compact separators",
+  "report_redactions": [
+    "family.teacher.checkpoint",
+    "lfm_weight_edit.checkpoint"
+  ],
+  "reports_sha256": {
+    "boolq": "7830f1fd84ae897d322a8e13b46910221f56a07ca676915d32692d5688ce285c",
+    "deletion_composition": "49a451563707b12e9b888feccd9622cab01be125a858da1362f71df7aeb88855",
+    "family": "3bfdd4db3fe87a0607de15d4bdf277fb392de0e809fe59134c49ec4389e5ba0b",
+    "lfm_extraction_benchmark": "efef97497b760027d9a95d6713268de9d365b42053834505e33f33a3e1bcf3f1",
+    "lfm_weight_edit": "cbea674f8b2c4de362fbfe23f9ed2a7c5de4321fdc370945cbf488f0ef038c6e",
+    "paddle_repair": "61e0d77c7826fb6a21e85cf407182ded971d0f822157f098045521b247d61861",
+    "spurious_feature": "b62378d04fd6bb7944633fcd2b92273ffc5ca26d5debe4b9328a153629e91259",
+    "lfm_patch_composition": "0bf1f253f01809c41a9d2925f95e22668e21318768408564b17fc515ab6af95d",
+    "lfm_weight_edit_replay": "172ff41c8a825aef4484443aadb831a17b3b6784cf3329c851192040c9c57bcf",
+    "lfm_algebraic_boundaries": "0fe99d0fdf0002bd6564b087141b132dbc73eedb113671abafa18ebe382e61ac",
+    "lfm_embedding_children": "57e0a889dd4d6230d37e6e29ff0ec669bc22df81c9c18994a22710403f3fd976",
+    "convolution_child": "2d36e0c51449c08ee13e63343d0d510a6959530ecefabaf5650190e203ebf12f",
+    "convolution_child_crossed": "090560ad229d73f15c15900d1c181b6fda85ef180c0ab369a70263c6fcef86fe",
+    "factored_child": "07dd5efc20190d81955b641b053af9d1a9695ec97ee45a1121efd1d4ecc537d6",
+    "reversal_compiler": "50a80b02027e24d679422db46c8e79bd1ac892efc4aaf857c89322ad7fe52d1c",
+    "sst2_child": "54ad50cf1a6c6367528f8e1dd7833649d994a7df07fede38ae5d55b3fac7ef4e",
+    "sst2_liquid_edit": "6c6b3fe30ea0da7831ee98bb0a4d29fba4235cd9eceb9471cb710ea296190baf",
+    "boolq_sst2_composition": "33e5b1f76d682a8bd6bf8fa1674c3acb6b48bc8f816ee6d0aec508fc1e5224f4"
+  },
+  "inputs": {
+    "model": {
+      "repo": "LiquidAI/LFM3-1.7B",
+      "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+      "files_sha256": {
+        "chat_template.jinja": "f45005c50cd2a97329722bf3a2dee9f16c04cdf825a589b280fb7e99e6827818",
+        "config.json": "8c6ae8b8f6d88c87cfb98cf4b5e34e943d0ee07e24215c4121b3159a46e1399d",
+        "configuration_lfm3.py": "176cced35657aedfea7d7002221360582d1c05fcaca882c21508bc3a73b282e5",
+        "generation_config.json": "0095ba7158e938b1e2d3082d412f00d8be85e42cbbd7608b63866f7a081cf270",
+        "lfm3_conv.py": "80d4a985382a22774212759248a6b4c737bfbf9c2a47b3dd7f797dda748e4bb4",
+        "modeling_lfm3.py": "e8cd5254ea99ce6bd731b57b10908c2e8b5010ce8315341f895a38484885eeab",
+        "special_tokens_map.json": "7946f864cbfb62a1b041bda937244210a1a87f4a6cab3a48b791131b2cd57f88",
+        "tokenizer.json": "7e226e34bface23ccf6e495d157bf77186c1c30a7659880e1a8994db528c3701",
+        "tokenizer_config.json": "bf028f813efc6137bc07ed045cafe71820df9a5e26a38e39954706ed1e30a457",
+        "model.safetensors": "135922caef64e81e52af88ede8b7c3ddaa9d6da220a9737fb3065275dbfb4330"
+      }
+    },
+    "extraction": {
+      "repo": "LiquidAI/structured-extraction",
+      "revision": "58f0d07d46cd58fcfedc836c0011653872eb10a9",
+      "files_sha256": {
+        "train.parquet": "8e8e9af197dc11b2cb4968ae3c5f77a1da6873aa02401e50d88bd648457f4917",
+        "test.parquet": "f1b352868c0caf86ed8a0e32946bc691389655338999c8782c2b3196acafb80c",
+        "test_unseen.parquet": "ab47c57935e6b1d742b925b544d7564282fb43996276e7053109fc54ca44c5cb"
+      }
+    },
+    "boolq": {
+      "repo": "google/boolq",
+      "revision": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+      "files_sha256": {
+        "train-00000-of-00001.parquet": "4f028e992c0bd4df30b9f056f4946b64f5c23028034ff0ed5ea467d8538cc623",
+        "validation-00000-of-00001.parquet": "52355d11524b4b874a9b9dcc278feb10f672d52c4f4eff9872e695ede59820f8"
+      }
+    },
+    "sst2": {
+      "repo": "stanfordnlp/sst2",
+      "revision": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb",
+      "files_sha256": {
+        "train-00000-of-00001.parquet": "c7921283b75a42e685f50edecb96798607ea0fcbfd0739ee8975f22c12d55f09",
+        "validation-00000-of-00001.parquet": "fb00fe008f6828f86ba2beda8415a4cf5da0c884f21c5f238c87131b5aa19529"
+      }
+    }
+  },
+  "original_direct_write_patch": {
+    "bytes": 39328,
+    "sha256": "7775428136656fa3cc8a2965287935ffa60333dc3f8db07389f909e588a16e4c",
+    "base_matrix_sha256": "33912b077de909509dd830c2edfeeb175a00f8febc7f4d4ab5e568c8bb687a1f"
+  }
+}

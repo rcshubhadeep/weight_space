@@ -1,0 +1,29 @@
+{
+  "model_revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "calibration_messages": 32,
+  "evaluation_messages": 128,
+  "tasks": {
+    "sentiment": {
+      "inherited": {
+        "correct": 64,
+        "threshold": 6.364545454545455
+      },
+      "overlap": {
+        "correct": 72,
+        "threshold": 2.171195652173913
+      }
+    },
+    "urgency": {
+      "inherited": {
+        "correct": 78,
+        "threshold": 4.783514492753623
+      },
+      "overlap": {
+        "correct": 72,
+        "threshold": -1.57518115942029
+      }
+    }
+  },
+  "bytes_per_table": 125033,
+  "shared_tokenizer_bytes": 17908635
+}

@@ -1,0 +1,78 @@
+{
+  "model_revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "fit": 512,
+  "calibration": 256,
+  "validation": 872,
+  "input_sha256": {
+    "train-00000-of-00001.parquet": "c7921283b75a42e685f50edecb96798607ea0fcbfd0739ee8975f22c12d55f09",
+    "validation-00000-of-00001.parquet": "fb00fe008f6828f86ba2beda8415a4cf5da0c884f21c5f238c87131b5aa19529"
+  },
+  "w2_sha256": "33912b077de909509dd830c2edfeeb175a00f8febc7f4d4ab5e568c8bb687a1f",
+  "base_w2_unchanged": true,
+  "systems": {
+    "fixed_AB": {
+      "calibration_correct": [
+        191,
+        195,
+        200,
+        209,
+        226,
+        229
+      ],
+      "scales": [
+        0.0,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "selected": 2.0,
+      "base": 762,
+      "edited": 783,
+      "fixed": 51,
+      "broken": 30,
+      "threshold_only": 759,
+      "threshold": -2.359375,
+      "full_head_replay": {
+        "base": 760,
+        "edited": 785,
+        "threshold_only": 759,
+        "fixed": 53,
+        "broken": 28
+      }
+    },
+    "native": {
+      "calibration_correct": [
+        188,
+        190,
+        195,
+        203,
+        222,
+        226
+      ],
+      "scales": [
+        0.0,
+        0.125,
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "selected": 2.0,
+      "base": 734,
+      "edited": 763,
+      "fixed": 78,
+      "broken": 49,
+      "threshold_only": 783,
+      "threshold": -4.390625,
+      "full_head_replay": {
+        "base": 735,
+        "edited": 763,
+        "threshold_only": 783,
+        "fixed": 77,
+        "broken": 49
+      }
+    }
+  }
+}
